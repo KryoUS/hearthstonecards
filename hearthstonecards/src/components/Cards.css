@@ -1,0 +1,12 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card_remove {
+    font-size: 12pt;
+    width: 75px;
+    height: 21px;
+}
