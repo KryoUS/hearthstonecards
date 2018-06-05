@@ -1,12 +1,23 @@
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
 }
 
 .card_remove {
+    background: #217aff;
+    color: white;
     font-size: 12pt;
-    width: 75px;
-    height: 21px;
+    width: 125px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.card_remove:hover {
+    background: #00327c;
+    color: white;
+    font-size: 12pt;
+    width: 125px;
+    height: 26px;
+    cursor: pointer;
 }

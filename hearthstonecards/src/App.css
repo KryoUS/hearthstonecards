@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: #ffffff;
 }
 
 .App-logo {
@@ -27,19 +28,9 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background-color: #222;
+  background-color: #0f0f0f;
   height: 8vh;
   color: white;
-}
-
-.nav_search {
-  width: 150px;
-}
-
-.nav_button {
-  font-size: 12pt;
-  width: 75px;
-  height: 21px;
 }
 
 @keyframes App-logo-spin {

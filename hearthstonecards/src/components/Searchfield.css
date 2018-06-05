@@ -1,0 +1,23 @@
+.nav_search {
+    width: 150px;
+}
+  
+.nav_button {
+    background: #0066ff;
+    text-align: center;
+    color: white;
+    font-size: 12pt;
+    width: 100px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.nav_button:hover {
+    background: #00327c;
+    text-align: center;
+    color: white;
+    font-size: 12pt;
+    width: 100px;
+    height: 21px;
+    cursor: pointer;
+}

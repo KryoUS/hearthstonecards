@@ -8,11 +8,11 @@ const app = express();
 app.use( bodyParser.json() );
 app.use(cors())
 
-const messagesBaseUrl = "/api/cards";
-app.post( messagesBaseUrl, cc.create );
-app.get( messagesBaseUrl, cc.read );
-app.put( `${messagesBaseUrl}/:id`, cc.update );
-app.delete( `${messagesBaseUrl}/:id`, cc.delete );
+const apiBaseUrl = "/api/cards";
+app.post( apiBaseUrl, cc.create );
+app.get( apiBaseUrl, cc.read );
+app.put( `${apiBaseUrl}/:id`, cc.update );
+app.delete( `${apiBaseUrl}/:id`, cc.delete );
 
 const port = 3030;
 app.listen( port, () => { console.log(`Server listening on port ${port}.`); } );

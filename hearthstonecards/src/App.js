@@ -3,7 +3,7 @@ import logo from './logo.png';
 import axios from 'axios';
 import './App.css';
 
-import { key } from './config.json'
+import { apiKey } from './config.json'
 import Cards from './components/Cards';
 import Searchfield from './components/Searchfield';
 
@@ -45,15 +45,19 @@ class App extends Component {
   }
 
   cardAdd = (data) => {
-    this.state.displayCards.push(data)
-    this.setState(this.state.displayCards)
+    axios.post(expressAPI, {cardId: data.cardId}).then(response => {
+      this.state.displayCards.push(data)
+      this.setState(this.state.displayCards)
+    }).catch(error => {
+      console.error(error)
+    })
   }
 
   cardRemove = (id) => {
     this.state.displayCards = this.state.displayCards.filter( key => {
       return key.cardId !== id
     })
-    this.setState(this.state.displayCards)
+    this.setState(this.state.displayCards) 
   }
 
   render() {

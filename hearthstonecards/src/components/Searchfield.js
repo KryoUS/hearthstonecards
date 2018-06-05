@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import cardSearch from './Cardsearch';
+import './Searchfield.css'
 
 export default class Searchfield extends Component {
     constructor() {
@@ -15,8 +16,8 @@ export default class Searchfield extends Component {
     }
 
     executeSearch = () => {
-    cardSearch(this.state.text).then(data => {
-        this.props.cardAdd(data)
+    cardSearch(this.state.text).then(resp => {
+        this.props.cardAdd(resp)
         this.setState({ text: '' })
     })
     }
@@ -27,7 +28,7 @@ export default class Searchfield extends Component {
         return (
             <div className="head_container">
                 <input className="nav_search" placeholder="Add card by name" value={ text } onChange={ (e) => this.updateSearchText( e.target.value ) }/>
-                <button className="nav_button" onClick={ this.executeSearch }>Search</button>
+                <button className="nav_button" onClick={ this.executeSearch }>Add Card</button>
             </div>
         )
     }
