@@ -12,7 +12,7 @@ const apiBaseUrl = "/api/cards";
 app.post( apiBaseUrl, cc.create );
 app.get( apiBaseUrl, cc.read );
 app.put( `${apiBaseUrl}/:id`, cc.update );
-app.delete( `${apiBaseUrl}/:id`, cc.delete );
+app.delete( `${apiBaseUrl}/:cardId`, cc.delete );
 
 const port = 3030;
 app.listen( port, () => { console.log(`Server listening on port ${port}.`); } );

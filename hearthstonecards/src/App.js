@@ -54,6 +54,11 @@ class App extends Component {
   }
 
   cardRemove = (id) => {
+    axios({
+      method: 'DELETE',
+      url: expressAPI + '/' + id
+    })
+
     this.state.displayCards = this.state.displayCards.filter( key => {
       return key.cardId !== id
     })
